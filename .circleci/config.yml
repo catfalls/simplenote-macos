@@ -70,3 +70,5 @@ workflows:
     jobs:
       - Test
       - Build App Store Target
+      - Upload to App Store:
+          requires: [ "Test",  "Build App Store Target" ]
